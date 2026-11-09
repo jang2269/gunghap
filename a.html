@@ -1,0 +1,189 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>사주한권 · 커플 궁합</title>
+<meta name="description" content="두 사람의 여덟 글자를 겹쳐 어디서 부딪히고 어디서 맞는지 정리합니다. 무료 세 줄부터.">
+<style>
+:root{
+--paper:#f7f2e7; --ink:#17130e; --ink2:#3f382d; --muted:#7c7263; --gold:#a8813f; --rule:#ddd2b8; --card:#fdfaf2;
+--serif:"Batang","바탕","Apple SD Gothic Neo",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.85;
+background-image:radial-gradient(rgba(168,129,63,.045) 1px,transparent 1px);background-size:3px 3px;padding-bottom:112px}
+.sheet{max-width:960px;margin:0 auto;padding:0 24px}
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+padding:22px 0 12px;border-bottom:1.5px solid var(--ink);font-size:11px;letter-spacing:1.6px;color:var(--muted)}
+.mast b{color:var(--ink);letter-spacing:2.4px}
+/* hero */
+.hero{padding:44px 0 30px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:18px}
+h1{font-size:clamp(30px,8.2vw,54px);line-height:1.28;font-weight:400;letter-spacing:-.02em;text-wrap:pretty}
+h1 .g{color:var(--gold)}
+.hero .sub{margin-top:22px;font-size:15px;color:var(--ink2);max-width:34ch}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:1px solid var(--rule)}
+.meta div{padding:11px 8px 11px 0;font-size:11.5px;color:var(--muted);border-right:1px solid var(--rule);line-height:1.5}
+.meta div:last-child{border-right:0;padding-right:0}
+.meta b{display:block;font-size:15px;color:var(--ink);font-weight:700;letter-spacing:0}
+/* toc */
+.toc{padding:26px 0 6px;border-bottom:1px solid var(--rule)}
+.toc h2{font-size:11px;letter-spacing:4px;color:var(--gold);font-weight:400;margin-bottom:12px}
+.toc a{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink);font-size:14px;padding:7px 0}
+.toc a span:first-child{color:var(--gold);font-size:11px;letter-spacing:1.5px;min-width:22px}
+.toc a i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px)}
+.toc a em{font-style:normal;font-size:11px;color:var(--muted)}
+/* chapter */
+.ch{display:grid;grid-template-columns:1fr;gap:8px;padding:40px 0;border-bottom:1px solid var(--rule)}
+.ch .side{font-size:11px;letter-spacing:3px;color:var(--gold)}
+.ch h2{font-size:22px;font-weight:700;letter-spacing:-.01em;margin:2px 0 12px}
+.ch p{font-size:14.5px;color:var(--ink2)}
+.cta{display:block;text-align:center;padding:16px;font-size:15px;text-decoration:none;margin-top:20px;min-height:52px}
+.cta.ink{background:var(--ink);color:#f8f3e6}
+.cta.line{border:1px solid var(--gold);color:var(--ink)}
+/* report mock */
+.report{background:var(--card);border:1px solid var(--rule);margin-top:6px}
+.report .hd{display:flex;justify-content:space-between;font-size:10px;letter-spacing:2.5px;color:var(--muted);padding:12px 16px;border-bottom:1px solid var(--rule)}
+.report .bd{padding:20px 18px;font-size:15px;line-height:2.1;color:var(--ink)}
+.report .bd b{color:var(--gold)}
+.axis{margin-top:14px;border-top:1px solid var(--rule)}
+.axis div{display:flex;justify-content:space-between;font-size:12.5px;padding:9px 0;border-bottom:1px dotted var(--rule);color:var(--ink2)}
+.axis div:last-child{border-bottom:0}
+.axis span:last-child{color:var(--gold);letter-spacing:1px}
+/* price table */
+.tbl{margin-top:8px;border-top:1.5px solid var(--ink)}
+.tbl .r{display:flex;align-items:baseline;gap:10px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.tbl .r .nm{font-size:15px}
+.tbl .r .nm small{display:block;font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.7}
+.tbl .r i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px)}
+.tbl .r .pr{font-size:19px;font-weight:700;white-space:nowrap}
+.tbl .r .pr small{font-size:11px;font-weight:400;color:var(--muted)}
+/* principles */
+.pl{display:grid;gap:0;margin-top:6px}
+.pl div{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:14px 0;border-bottom:1px dotted var(--rule);font-size:14px;color:var(--ink2)}
+.pl div b{font-weight:400;color:var(--gold);font-size:11px;letter-spacing:1px;padding-top:5px}
+/* reviews */
+.rv{display:grid;gap:16px;margin-top:6px}
+.rv blockquote{font-size:14.5px;color:var(--ink);line-height:1.95}
+.rv cite{display:block;font-style:normal;font-size:11px;letter-spacing:1.6px;color:var(--muted);margin-top:6px}
+/* form */
+.form{background:var(--ink);color:#f4efe2;padding:30px 22px;margin:0 -24px;padding-left:24px;padding-right:24px}
+.form h2{color:#f8f3e6;font-size:20px;margin-bottom:10px}
+.form p{color:#c9c0ac;font-size:13.5px}
+.form .cta{margin-top:18px}
+.form .cta.gold{background:var(--gold);color:#17130e;font-weight:700}
+.fine{font-size:11px;color:#9a917e;margin-top:12px;line-height:1.8}
+/* colophon */
+.colo{padding:26px 0 30px;font-size:11px;color:var(--muted);line-height:2}
+.colo b{color:var(--ink);font-weight:400}
+/* sticky */
+.bar{position:fixed;inset:auto 0 0 0;background:rgba(247,242,231,.97);border-top:1px solid var(--rule);padding:10px 24px}
+.bar a{display:flex;align-items:center;justify-content:center;max-width:912px;margin:0 auto;background:var(--ink);color:#f8f3e6;height:52px;text-decoration:none;font-size:15px;letter-spacing:.5px}
+@media(min-width:760px){
+ body{padding-bottom:96px}
+ .ch{grid-template-columns:150px 1fr;gap:28px;padding:46px 0}
+ .ch .side{text-align:right;padding-top:6px}
+ .meta div{flex:1 1 0}
+ .form{padding:38px 30px}
+}
+</style></head><body>
+<div class="sheet">
+<div class="mast"><b>사주한권</b><span>궁합 · 두 사람의 여덟 글자</span></div>
+
+<header class="hero">
+  <div class="eyebrow">커플 궁합 · 무료 세 줄</div>
+  <h1>두 사람의 여덟 글자를<br><span class="g">겹쳐</span> 봅니다.</h1>
+  <p class="sub">점이 아니라 설명입니다. 어디서 부딪히고, 어디서 맞는지.</p>
+  <div class="meta">
+    <div><b>3줄</b>무료 요약</div>
+    <div><b>24시간</b>회신 기준</div>
+    <div><b>92쪽</b>책 분량</div>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>목차</h2>
+  <a href="#c1"><span>01</span>먼저 세 줄<i></i><em>무료</em></a>
+  <a href="#c2"><span>02</span>이런 문장이 나옵니다<i></i><em>예시</em></a>
+  <a href="#c3"><span>03</span>두 가지입니다<i></i><em>가격</em></a>
+  <a href="#c4"><span>04</span>왜 다른가<i></i><em>원칙</em></a>
+  <a href="#c5"><span>05</span>받아보신 분들<i></i><em>후기</em></a>
+</nav>
+
+<section class="ch" id="c1">
+  <div class="side">01 / 무료</div>
+  <div>
+    <h2>먼저 세 줄</h2>
+    <p>생년월일만 남겨주세요. 태어난 시간은 몰라도 됩니다. 두 사람의 관계를 세 줄로 정리해 회신합니다. 결제는 없습니다.</p>
+    <a class="cta ink" href="#form">무료 세 줄 신청</a>
+  </div>
+</section>
+
+<section class="ch" id="c2">
+  <div class="side">02 / 예시</div>
+  <div>
+    <h2>이런 문장이 나옵니다</h2>
+    <div class="report">
+      <div class="hd"><span>REPORT · 1 / 4</span><span>庚午 · 乙卯</span></div>
+      <div class="bd">
+        “두 분은 물과 불입니다.<br>그래서 끌리고, 그래서 지칩니다.<br>겹치는 자리는 <b>卯</b> 하나 —<br>이 자리가 관계의 바닥입니다.”
+        <div class="axis">
+          <div><span>겹치는 자리</span><span>卯 · 강함</span></div>
+          <div><span>부딪히는 자리</span><span>火 ↔ 水</span></div>
+          <div><span>끌리는 이유</span><span>합(合) 1</span></div>
+          <div><span>오래 가는 조건</span><span>속도 조절</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="c3">
+  <div class="side">03 / 가격</div>
+  <div>
+    <h2>두 가지입니다</h2>
+    <div class="tbl">
+      <div class="r"><span class="nm">내 사주 책<small>92쪽 · A5 · 이름 각인 · 제작 7~10일</small></span><i></i><span class="pr">49,000<small>원</small></span></div>
+      <div class="r"><span class="nm">커플 궁합 상담<small>두 사람 명식 비교 · 4축 리포트 · 24시간 내 회신</small></span><i></i><span class="pr">89,000<small>원</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="c4">
+  <div class="side">04 / 원칙</div>
+  <div>
+    <h2>왜 다른가</h2>
+    <div class="pl">
+      <div><b>01</b><span>계산이 먼저입니다. 절기와 음양력 변환을 포함한 만세력으로 여덟 글자와 대운을 산출합니다.</span></div>
+      <div><b>02</b><span>단정하지 않습니다. “반드시”가 아니라 “이런 구조”라고 씁니다.</span></div>
+      <div><b>03</b><span>화면이 아니라 책입니다. 손에 남고, 해마다 다시 펼쳐볼 수 있습니다.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="c5">
+  <div class="side">05 / 후기</div>
+  <div>
+    <h2>받아보신 분들</h2>
+    <div class="rv">
+      <blockquote>“말이 너무 정확해서 웃었어요. 변명할 데가 없더라고요.”<cite>30대 · 커플 상담</cite></blockquote>
+      <blockquote>“상담이 아니라 설명을 받은 기분이었어요.”<cite>20대 후반 · 커플 상담</cite></blockquote>
+      <blockquote>“결혼 앞두고 봤는데, 대화가 편해졌습니다.”<cite>30대 중반 · 사주 책</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="form" id="form">
+  <h2>무료 세 줄 신청</h2>
+  <p>두 사람의 생년월일을 남겨주세요. 시간은 몰라도 됩니다. 24시간 안에 회신합니다.</p>
+  <a class="cta gold" href="https://forms.gle/PLACEHOLDER" target="_blank" rel="noopener">신청 폼 열기</a>
+  <p class="fine">수집 항목: 생년월일 · 시간(선택) · 연락처. 상담 목적 외 사용하지 않으며 완료 후 파기합니다.</p>
+</section>
+
+<footer class="colo">
+  <b>사주한권</b> · 글로벌스타 356-09-03150<br>
+  대구 북구 침산남로30길 40 101동 1101호<br>
+  문의 카카오톡 채널 (준비 중) · 개인정보 처리방침
+</footer>
+</div>
+<div class="bar"><a href="#form">무료 세 줄 신청하기</a></div>
+</body></html>
