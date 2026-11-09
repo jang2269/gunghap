@@ -8,9 +8,10 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.85;
+body{word-break:keep-all;overflow-wrap:break-word;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.85;
 background-image:radial-gradient(rgba(168,129,63,.045) 1px,transparent 1px);background-size:3px 3px;padding-bottom:112px}
 .sheet{max-width:960px;margin:0 auto;padding:0 24px}
+.hero>*,{max-width:100%}
 /* masthead */
 .mast{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
 padding:22px 0 12px;border-bottom:1.5px solid var(--ink);font-size:11px;letter-spacing:1.6px;color:var(--muted)}
@@ -20,11 +21,12 @@ padding:22px 0 12px;border-bottom:1.5px solid var(--ink);font-size:11px;letter-s
 .eyebrow{font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:18px}
 h1{font-size:clamp(30px,8.2vw,54px);line-height:1.28;font-weight:400;letter-spacing:-.02em;text-wrap:pretty}
 h1 .g{color:var(--gold)}
-.hero .sub{margin-top:22px;font-size:15px;color:var(--ink2);max-width:34ch}
+.hero .sub{margin-top:22px;font-size:15px;color:var(--ink2);max-width:36ch;line-height:1.9}
 .meta{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:1px solid var(--rule)}
 .meta div{padding:11px 8px 11px 0;font-size:11.5px;color:var(--muted);border-right:1px solid var(--rule);line-height:1.5}
 .meta div:last-child{border-right:0;padding-right:0}
 .meta b{display:block;font-size:15px;color:var(--ink);font-weight:700;letter-spacing:0}
+.heroCta{display:inline-block;margin-top:20px;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}
 /* toc */
 .toc{padding:26px 0 6px;border-bottom:1px solid var(--rule)}
 .toc h2{font-size:11px;letter-spacing:4px;color:var(--gold);font-weight:400;margin-bottom:12px}
@@ -93,6 +95,7 @@ h1 .g{color:var(--gold)}
   <div class="eyebrow">커플 궁합 · 무료 세 줄</div>
   <h1>두 사람의 여덟 글자를<br><span class="g">겹쳐</span> 봅니다.</h1>
   <p class="sub">점이 아니라 설명입니다. 어디서 부딪히고, 어디서 맞는지.</p>
+  <a class="heroCta" href="#form">무료 세 줄 받기 →</a>
   <div class="meta">
     <div><b>3줄</b>무료 요약</div>
     <div><b>24시간</b>회신 기준</div>
